@@ -24,10 +24,10 @@ namespace FilmProject
     public sealed partial class MainPage : Page
     {
         private Dictionary<string, List<Film>> dico;
-        private List<Acteur> 
+        private List<Acteur> lesActeurs;
 
         public MainPage()
-        {           
+        {
             this.InitializeComponent();
         }
 

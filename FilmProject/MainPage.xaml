@@ -27,12 +27,17 @@
         <TextBlock HorizontalAlignment="Left" Margin="583,603,0,0" Text="Saisir le nombre d'entrées du film" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="376"/>
         <TextBlock HorizontalAlignment="Left" Margin="583,664,0,0" Text="Saisir un nom du réalisateur" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="376"/>
         <TextBlock HorizontalAlignment="Left" Margin="583,717,0,0" Text="Saisir un prénom du réalisateur" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="376"/>
-        <GridView>
-            <DataTemplate>
-                <StackPanel>
-                    <Image Source="{Binding }" Stretch="UniformToFill" Width="50" Height="50"></Image>
-                </StackPanel>
-            </DataTemplate>
+        <GridView Name="gvActeurs" SelectionMode="Multiple" Margin="928,280,106,518">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image Source="{Binding PhotoActeur}" Stretch="Fill" Width="50" Height="50"/>
+                        <Border VerticalAlignment="Bottom">
+                            <TextBlock Text="{Binding NomActeur}" HorizontalAlignment="Center" RequestedTheme="Dark" VerticalAlignment="Center" FontSize="10"/>
+                        </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
         </GridView>
 
     </Grid>
